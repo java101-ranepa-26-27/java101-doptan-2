@@ -20,10 +20,10 @@ public class Student {
     }
     public String getStatus() {
         double avg = averageMarks();
-        if (avg >= 4.5) return "отличник";
-        if (avg >= 3.5) return "хорошист";
-        if (avg >= 2.5) return "троечник";
-        return "двоечник";
+        if (avg >= 4.5) return "excellent";
+        if (avg >= 3.5) return "good";
+        if (avg >= 2.5) return "C student";
+        return "underachiever";
     }
 }
 

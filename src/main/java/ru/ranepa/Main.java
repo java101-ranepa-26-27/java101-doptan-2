@@ -9,9 +9,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         List<Integer> marks = new ArrayList<>();
-        System.out.println("Введите имя:");
+        System.out.println("Name:");
         String name = scanner.next();
-        System.out.println("Введите оценки:");
+        System.out.println("Marks:");
         int mark = -1;
         while (true) {
             mark = scanner.nextInt();
@@ -20,8 +20,12 @@ public class Main {
             }
             marks.add(mark);
         }
+
         Student student = new Student(name, marks);
-        System.out.println("Отчёт");
-        System.out.println(student.getStatus());
+        double avg = student.averageMarks();
+        System.out.println("Name: " + name);
+        System.out.println("Marks:" + marks);
+        System.out.println("Average:" + avg);
+        System.out.println("Status:" + student.getStatus());
     }
 }
